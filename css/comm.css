@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: #333;
+}
+
+.wrap {
+  height: 100svh;
+}
+
+#main {
+  display: flex;
+  height: calc(100% - 120px);
+}
+
+/* header */
+#header {
+  width: 200px;
+}
+
+h1 a {
+  display: flex;
+  justify-content: center;
+}
+
+h1 img {
+  display: block;
+  padding-top: 20px;
+}
+
+/* nav */
+nav {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 18px;
+}
+
+nav .depth1 {
+  position: relative;
+}
+
+nav .depth1 > li > a {
+  display: block;
+  padding: 10px 20px;
+  border-bottom: 0.5px solid #555;
+}
+
+nav .depth2 {
+  background-color: #eee;
+  width: 100%;
+  position: absolute;
+  left: 200px;
+  top: 0;
+  overflow: hidden;
+  /* display: none; */
+  max-height: 0;
+}
+
+nav .depth2 li:hover a {
+  display: block;
+  background-color: #333;
+  color: #fff;
+}
+
+.depth2 a {
+  padding: 10px 20px;
+  display: flex;
+  width: 100%;
+}
+
+nav .depth1 > li:hover > a {
+  background-color: lightblue;
+}
+
+nav .depth1:hover .depth2 {
+  display: flex;
+  flex-direction: column;
+}
+
+nav .depth1 > li:hover .depth2 {
+  max-height: 300px;
+}
+
+nav .depth1 > li:hover .depth2 a {
+  display: block;
+}
+
+/* main */
+.content {
+  width: 400px;
+}
+
+/* banner */
+.banner {
+  /* height: 100px; */
+  display: flex;
+  align-items: center;
+}
+
+.banner-tit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner img {
+  width: 200px;
+  display: block;
+}
+
+.banner p {
+  font-size: 16px;
+  text-align: center;
+}
+
+/* tab */
+.notice h2,
+.gallary h2 {
+  padding-bottom: 10px;
+}
+
+.notice {
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-bbs a {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+
+.gallary {
+  padding: 10px 20px;
+}
+
+.gallary-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 20px;
+}
+
+.gallary-list a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gallary-list p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallary-list img {
+  width: 150px;
+  object-fit: cover;
+}
+
+.container a {
+  width: 50%;
+}
+.gallary img {
+  height: 200px;
+}
+
+/* goto */
+.goto {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 20px;
+}
+
+.goto a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.goto img {
+  width: 80px;
+}
+
+/* slide */
+.slide {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  /* width: calc(100% -200px - 400px); */
+}
+
+.slide ul {
+  position: absolute;
+  display: flex;
+  width: 300%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: left 0.3s;
+}
+
+.slide ul li {
+  width: 100%;
+}
+
+.slide ul img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* footer */
+#footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-ft {
+  width: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-ft img {
+  filter: grayscale(100%);
+}
+
+.ft-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.ft-menulist ul {
+  display: flex;
+  align-items: center;
+}
+
+.ft-menulist {
+  display: flex;
+  flex: 1;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.ft-menulist li {
+  padding: 20px;
+}
+
+.copyright {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.famliysite {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.fs-top,
+.fs-bottom {
+  padding: 10px;
+}
+
+.famliysite a {
+  margin: 10px;
+}
+
+/* modal */
+.modal-bg {
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+.modal-box {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 20px;
+  width: 500px;
+  height: 300px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.modal-box strong {
+  font-size: 20px;
+}
+
+.modal-close {
+  display: block;
+  border: none;
+  background-color: red;
+  width: 35px;
+  height: 35px;
+}
+
+.modal-close a {
+  color: #fff;
+}
